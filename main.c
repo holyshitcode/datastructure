@@ -84,8 +84,21 @@ void unitTest() {
     assertEqualInt(head->key,20,null);
 }
 
+void unitTest2() {
+    //given
+    node *head = NULL;
+    insertNode(&head, 10);
+    insertNode(&head, 20);
+    insertNode(&head, 30);
+    //when
+    node *result = findNode(&head, 10);
+    //then
+    assertEqualInt(result->key,10,null);
+}
+
 int main(void) {
     unitTest();
+    unitTest2();
     node *head = NULL;
     insertNode(&head, 1);
     insertNode(&head, 2);
